@@ -1,174 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Deltarune</title>
-</head>
-<body style="background:black;color:white;text-align:center;">
-    <h1>DELTARUNE</h1>
-    <p><!DOCTYPE html>
-<html>
-<head>
-  <base href="https://cdn.jsdelivr.net/gh/technonyte00/deltarune@main/">
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="style.css">
+  <title>GN Math</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: white;
+    }
+
+    header {
+      background: #020617;
+      padding: 15px;
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    /* Scroll area */
+    .grid-container {
+      height: calc(100vh - 60px);
+      overflow-y: auto;
+      padding: 20px;
+    }
+
+    /* 6-column grid */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 15px;
+    }
+
+    /* Game tile */
+    .game-btn {
+      height: 240px;
+      background: #1e293b;
+      border: none;
+      border-radius: 10px;
+      padding: 0;
+      cursor: pointer;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .game-btn:hover {
+      background: #334155;
+    }
+
+    /* Image (top 5/6) */
+    .game-img {
+      flex: 5;
+      background-size: cover;
+      background-position: center;
+    }
+
+    /* Title (bottom 1/6) */
+    .game-title {
+      flex: 1;
+      background: #020617;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
-  <div class="logo-container">
-    <img src="logo.png" alt="Logo" class="logo">
+
+<header>GN Math</header>
+
+<div class="grid-container">
+  <div class="grid">
+
+    <button class="game-btn">
+      <div class="game-img" style="background-image: url('images/game1.png');"></div>
+      <div class="game-title">Game 1</div>
+    </button>
+
+    <button class="game-btn">
+      <div class="game-img" style="background-image: url('images/game2.png');"></div>
+      <div class="game-title">Game 2</div>
+    </button>
+
+    <button class="game-btn">
+      <div class="game-img" style="background-image: url('images/game3.png');"></div>
+      <div class="game-title">Game 3</div>
+    </button>
+
+    <button class="game-btn">
+      <div class="game-img" style="background-image: url('images/game4.png');"></div>
+      <div class="game-title">Game 4</div>
+    </button>
+
+    <button class="game-btn">
+      <div class="game-img" style="background-image: url('images/game5.png');"></div>
+      <div class="game-title">Game 5</div>
+    </button>
+
+    <button class="game-btn">
+      <div class="game-img" style="background-image: url('images/game6.png');"></div>
+      <div class="game-title">Game 6</div>
+    </button>
+
+    <!-- Row 2 -->
+    <button class="game-btn">
+      <div class="game-img" style="background-image: url('images/game7.png');"></div>
+      <div class="game-title">Game 7</div>
+    </button>
+
+    <button class="game-btn">
+      <div class="game-img" style="background-image: url('images/game8.png');"></div>
+      <div class="game-title">Game 8</div>
+    </button>
+
+    <button class="game-btn">
+      <div class="game-img" style="background-image: url('images/game9.png');"></div>
+      <div class="game-title">Game 9</div>
+    </button>
+
+    <button class="game-btn">
+      <div class="game-img" style="background-image: url('images/game10.png');"></div>
+      <div class="game-title">Game 10</div>
+    </button>
+
+    <button class="game-btn">
+      <div class="game-img" style="background-image: url('images/game11.png');"></div>
+      <div class="game-title">Game 11</div>
+    </button>
+
+    <button class="game-btn">
+      <div class="game-img" style="background-image: url('images/game12.png');"></div>
+      <div class="game-title">Game 12</div>
+    </button>
+
   </div>
-  
-  <div class="menu">
-    <a href="javascript:loadChapter(1)" class="row">
-      <span class="chapter">Chapter 1</span>
-      <span class="title">The Beginning</span>
-      <img src="icons/1.png">
-    </a>
-    <a href="javascript:loadChapter(2)" class="row">
-      <span class="chapter">Chapter 2</span>
-      <span class="title">A Cyber's World</span>
-      <img src="icons/2.png">
-    </a>
-    <a href="javascript:loadChapter(3)" class="row">
-      <span class="chapter">Chapter 3</span>
-      <span class="title">Late Night</span>
-      <img src="icons/3.png">
-    </a>
-    <a href="javascript:loadChapter(4)" class="row">
-      <span class="chapter">Chapter 4</span>
-      <span class="title">Prophecy</span>
-      <img src="icons/4.png">
-    </a>
-    <a href="javascript:alert('Chapter 5 coming soon!')" class="disabled-row">
-      <span class="chapter">Chapter 5</span>
-      <span class="disabled-title">--</span>
-      <img src="icons/0.png">
-    </a>
-    <a href="javascript:alert('Chapter 6 coming soon!')" class="disabled-row">
-      <span class="chapter">Chapter 6</span>
-      <span class="disabled-title">--</span>
-      <img src="icons/0.png">
-    </a>
-    <a href="javascript:alert('Chapter 7 coming soon!')" class="disabled-row">
-      <span class="chapter">Chapter 7</span>
-      <span class="disabled-title">--</span>
-      <img src="icons/0.png">
-    </a>
-    <a href="javascript:window.open('https://truffled.lol', '_blank')" class="row">
-      <span class="chapter"></span>
-      <span class="title">port by bog :o</span>
-      <span class="badge"></span>
-    </a>
-  </div>
-  <audio id="drone" controls loop autoplay hidden>
-    <source src="audios/AUDIO_DRONE.ogg" type="audio/ogg">
-    your slow ass browser doesnt support AUDIO?
-  </audio>
-  <button id="mute">🔊</button>
-  <script>
-    const audio = document.getElementById('drone');
-    const mute = document.getElementById('mute');
-    let gamestarted = false;
-  
-    mute.addEventListener('click', () => {
-      if (!gamestarted) {
-        audio.muted = !audio.muted;
-        updateButton(); 
-      }
-    });
-  
-    function updateButton() {
-      if (!gamestarted) {
-        mute.textContent = audio.muted ? '🔊' : '🔇';
-      }
-    }
-  
-    updateButton();
+</div>
 
-    function loadChapter(chapter) {
-      fetch(`chapter${chapter}/index.html`).then(res => res.text()).then(html => {
-        gamestarted = true;
-        document.documentElement.innerHTML = html;
-        document.documentElement.querySelectorAll('script').forEach(oldScript => {
-          const newScript = document.createElement('script');
-          if (oldScript.src) {
-            newScript.src = oldScript.src;
-          } else {
-            newScript.textContent = oldScript.textContent;
-          }
-          document.body.appendChild(newScript);
-        });
-      });
-    }
-
-    const hoverSound = document.getElementById('hover-sound');
-
-    const menumoveaudio = new Audio('audios/snd_menumove.mp3');
-    const menuselectaudio = new Audio('audios/snd_select.mp3');
-    document.querySelectorAll('.row').forEach(row => {
-      row.addEventListener('mouseenter', () => {
-        if (!gamestarted) {
-          menumoveaudio.play();
-          if (selectedChapter) {
-            document.querySelectorAll('.row')[selectedChapter].classList.remove("selected");
-          }
-        }
-      });
-      row.addEventListener('click', () => {
-        if (!gamestarted) {
-          menuselectaudio.play();
-        }
-      });
-    });
-
-    let selectedChapter = null;
-    document.addEventListener('keydown', function(event) {
-      if (!gamestarted) {
-      if (event.key === 'ArrowUp') {
-        if (selectedChapter === null) {
-          selectedChapter = 0;
-          document.querySelectorAll('.row')[0].classList.add("selected");
-          menumoveaudio.play();
-        } else {
-          document.querySelectorAll('.row')[selectedChapter].classList.remove("selected");
-          selectedChapter--;
-          if (selectedChapter < 0) {
-            selectedChapter = document.querySelectorAll('.row').length - 1;
-          }
-          document.querySelectorAll('.row')[selectedChapter].classList.add("selected");
-          menumoveaudio.play();
-        }
-      } else if (event.key === 'ArrowDown') {
-        if (selectedChapter === null) {
-          selectedChapter = 0;
-          document.querySelectorAll('.row')[0].classList.add("selected");
-          menumoveaudio.play();
-        } else {
-          if (selectedChapter+1 >= document.querySelectorAll('.row').length) {
-            document.querySelectorAll('.row')[selectedChapter].classList.remove("selected");
-            selectedChapter = 0;
-            document.querySelectorAll('.row')[0].classList.add("selected");
-            menumoveaudio.play();
-          } else {
-            document.querySelectorAll('.row')[selectedChapter].classList.remove("selected");
-            selectedChapter++;
-            document.querySelectorAll('.row')[selectedChapter].classList.add("selected");
-            menumoveaudio.play();
-          }
-        }
-      } else if (event.key === 'Enter') {
-        if (selectedChapter !== null) {
-          window.location.href = document.querySelectorAll('.row')[selectedChapter].href;
-          menuselectaudio.play();
-        } 
-      }
-      }
-    });
-  </script>
-</body>
-</html></p>
-
-    <br>
-    <a href="index.html" style="color:#7b3fe4;">⬅ Back to Home</a>
 </body>
 </html>
+
